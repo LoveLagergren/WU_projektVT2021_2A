@@ -66,12 +66,12 @@
     grid-template-rows: repeat(8, 1fr);
     grid-template-areas:
     "he na na na na na"
-    "hb hb ht ht ht ht"
-    "hb hb ht ht ht ht"
-    "hb hb ht ht ht ht"
-    "hb hb ht ht ht ht"
-    "hb hb ht ht ht ht"
-    "hb hb ht ht ht ht"
+    "h1 x1 x1 h2 x2 x2"
+    "h1 x1 x1 h2 x2 x2"
+    "h1 x1 x1 h2 x2 x2"
+    "h3 x3 x3 h4 x4 x4"
+    "h3 x3 x3 h4 x4 x4"
+    "h3 x3 x3 h4 x4 x4"
     "fo fo fo fo fo fo"
     ;
     
@@ -475,50 +475,157 @@ footer {
     font-size: xx-large;
 }
 
-#historia_bild {
-    grid-area: hb;
+#historia_bild1 {
+    grid-area: h1;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
+    background-color: aqua;
 }
 
-#historia_bild img {
+#historia_bild1 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#historia_text {
+#historia_text1 {
+    grid-area: x1;
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    align-items: center;
+}
+
+#historia_text1 em {
+    position: relative;
+    top: -100px;
+    left: 175px;
+    font-size: xx-large;
+    font-family: sans-serif;
+}
+
+#historia_text1 small {
+    position: relative;
+    margin-right: 10%;
+    font-family: monospace;
+}
+
+#historia_bild2 {
+    grid-area: h2;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    grid-area: ht;
-    flex-direction: column;
+    background-color: aqua;
+}
+
+#historia_bild2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#historia_text2 {
+    grid-area: x2;
     display: flex;
+    justify-content: center;
+    background-color: brown;
+    align-items: center;
+}
+
+#historia_text2 em {
+    position: relative;
+    top: -100px;
+    font-size: xx-large;
+    font-family: sans-serif;
+}
+
+#smalltext {
+    position: relative;
+    bottom: 600%;
+    left: 450%;
+    font-family: monospace;
+}
+
+
+#historia_bild3 {
+    grid-area: h3;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+
+#historia_bild3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#historia_text3 {
+    grid-area: x3;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     background-color: brown;
 }
 
-#historia_text em {
-    width: 100%;
-    display: flex;
+#historia_text3 em {
     position: relative;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: xx-large;
     top: 50px;
+    font-size: xx-large;
+    font-family: sans-serif;
+
 }
 
-#historia_text p {
-    width: 100%;
-    display: flex;
+#smalltext3 {
     position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    top: 100px;
-    padding: 30px;
+    bottom: 275px;
+    left: 50%;
+    font-family: monospace;
+}
 
+#historia_bild4 {
+    grid-area: h4;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+
+#historia_bild4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#historia_text4 {
+    grid-area: x4;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+
+#historia_text4 em {
+    position: relative;
+    top: 50px;
+    font-size: xx-large;
+    font-family: sans-serif;
+}
+
+#smalltext4 {
+    position: relative;
+    bottom: 275px;
+    left: 250%;
+    font-family: monospace;
 }
 
 #trupp_bild {
@@ -657,15 +764,13 @@ footer {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
         "he na"
-        "ht ht"
-        "ht ht"
-        "ht ht"
-        "hb hb"
-        "hb hb"
-        "hb hb"
+        "h1 x1"
+        "h2 x2"
+        "h3 x3"
+        "h4 x4"
         "fo fo"
         ;
         
@@ -739,7 +844,7 @@ footer {
     .nav-links a {
         color: brown;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 15px;
         letter-spacing: 3px;
         font-weight: bold;
         text-transform: uppercase;
@@ -774,37 +879,164 @@ footer {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    #historia_text {
+    #historia_bild1 {
+        grid-area: h1;
+        display: flex;
+        justify-content: center;
         width: 100%;
         height: 100%;
-        grid-area: ht;
-        flex-direction: column;
-        display: flex;
-        background-color: brown;
+        background-color: aqua;
     }
     
-    #historia_text em {
+    #historia_bild1 img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #historia_text1 {
+        grid-area: x1;
         display: flex;
-        position: relative;
-        align-items: center;
         justify-content: center;
-        text-align: center;
-        font-size: xx-large;
+        background-color: brown;
+        align-items: center;
+    }
+    
+    #historia_text1 em {
+        position: relative;
+        top: -100px;
+        left: 40%;
+        font-size: x-large;
+        font-family: sans-serif;
+    }
+    
+    #historia_text1 small {
+        position: relative;
+        margin-right: 10%;
+        font-family: monospace;
         top: 10px;
     }
     
-    #historia_text p {
-        width: 100%;
+    #historia_bild2 {
+        grid-area: h2;
         display: flex;
-        position: relative;
         justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: aqua;
+    }
+    
+    #historia_bild2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    #historia_text2 {
+        grid-area: x2;
+        display: flex;
+        justify-content: center;
+        background-color: brown;
         align-items: center;
-        text-align: center;
-        top: 20px;
-        padding: 30px;
+    }
+    
+    #historia_text2 em {
+        position: relative;
+        top: -100px;
+        font-size: x-large;
+        font-family: sans-serif;
+    }
+    
+    #smalltext {
+        position: relative;
+        bottom: 900px;
+        left: 105%;
+        font-family: monospace;
+        font-size: 10px;
+        justify-content: space-around;
+
+    }
+    
+    
+    #historia_bild3 {
+        grid-area: h3;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+    }
+    
+    #historia_bild3 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #historia_text3 {
+        grid-area: x3;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: brown;
+    }
+    
+    #historia_text3 em {
+        position: relative;
+        top: 10px;
+        font-size: x-large;
+        font-family: sans-serif;
     
     }
+    
+    #smalltext3 {
+        position: relative;
+        bottom: 675px;
+        left: 2.5%;
+        font-family: monospace;
+    }
+    
+    #historia_bild4 {
+        grid-area: h4;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+    }
+    
+    #historia_bild4 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #historia_text4 {
+        grid-area: x4;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: brown;
+    }
+    
+    #historia_text4 em {
+        position: relative;
+        top: 10px;
+        font-size: x-large;
+        font-family: sans-serif;
+    }
+    
+    #smalltext4 {
+        position: relative;
+        bottom: 500px;
+        left: 102.5%;
+        font-family: monospace;
+    }
+
+    
 
     #trupp_bild img {
         width: 100%;
